@@ -1,0 +1,10 @@
+language: node_js
+node_js: lts/*
+cache: yarn
+install: skip
+script:
+  - yarn add -D nodemiral
+  - node scripts/deploy.js
+branches:
+  only:
+    - master
