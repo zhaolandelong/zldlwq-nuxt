@@ -8,8 +8,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
     '@nuxtjs',
+    '@nuxtjs/eslint-config-typescript',
     'prettier',
     'prettier/vue',
     'plugin:prettier/recommended',
@@ -20,4 +20,4 @@ module.exports = {
   rules: {
     'nuxt/no-cjs-in-config': 'off'
   }
-}
+};

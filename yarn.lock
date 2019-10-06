@@ -1393,6 +1393,11 @@
     "@types/koa-compose" "*"
     "@types/node" "*"
 
+"@types/lodash@^4.14.141":
+  version "4.14.141"
+  resolved "https://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.141.tgz#d81f4d0c562abe28713406b571ffb27692a82ae6"
+  integrity sha1-2B9NDFYqvihxNAa1cf+ydpKoKuY=
+
 "@types/memory-fs@*":
   version "0.3.2"
   resolved "https://registry.npm.taobao.org/@types/memory-fs/download/@types/memory-fs-0.3.2.tgz#5d4753f9b390cb077c8c8af97bc96463399ceccd"
@@ -4830,7 +4835,7 @@ fsevents@^1.2.7:
     nan "^2.12.1"
     node-pre-gyp "^0.12.0"
 
-fsevents@~2.1.0:
+fsevents@^2.1.0, fsevents@~2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/fsevents/download/fsevents-2.1.0.tgz#ce1a5f9ac71c6d75278b0c5bd236d7dfece4cbaa"
   integrity sha1-zhpfmsccbXUniwxb0jbX3+zky6o=
@@ -10679,6 +10684,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha1-vXbWojMj4sqP+hICjcBFWcdfkBk=
 
+vue-class-component@^7.0.1, vue-class-component@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.npm.taobao.org/vue-class-component/download/vue-class-component-7.1.0.tgz#b33efcb10e17236d684f70b1e96f1946ec793e87"
+  integrity sha1-sz78sQ4XI21oT3Cx6W8ZRux5Poc=
+
 vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/vue-client-only/download/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
@@ -10735,6 +10745,13 @@ vue-no-ssr@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/vue-no-ssr/download/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
   integrity sha1-h1875vsK5BVoqDfzrBqA6qE3uZg=
+
+vue-property-decorator@^8.2.2:
+  version "8.2.2"
+  resolved "https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-8.2.2.tgz#ac895e9508ee1bf86e3a28568d94d842c2c8e42f"
+  integrity sha1-rIlelQjuG/huOihWjZTYQsLI5C8=
+  dependencies:
+    vue-class-component "^7.0.1"
 
 vue-router@~3.0.7:
   version "3.0.7"
