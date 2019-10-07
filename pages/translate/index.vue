@@ -86,7 +86,7 @@ class Translate extends Vue {
   tempTxt: string = '';
   resultTxt: string = '';
   srcTxt: string = '';
-  langType: boolean = false;
+  langType: boolean = true;
 
   platforms = {
     google: {
