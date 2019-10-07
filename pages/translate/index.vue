@@ -2,7 +2,11 @@
   <div class="trans-wrap">
     <el-row style="margin-bottom: 8px;">
       <el-col :span="24">
-        <el-switch v-model="type" active-text="EN->ZH" inactive-text="ZH->EN">
+        <el-switch
+          v-model="langType"
+          active-text="EN->ZH"
+          inactive-text="ZH->EN"
+        >
         </el-switch>
       </el-col>
     </el-row>
@@ -82,7 +86,7 @@ class Translate extends Vue {
   tempTxt: string = '';
   resultTxt: string = '';
   srcTxt: string = '';
-  type: boolean = true;
+  langType: boolean = false;
 
   platforms = {
     google: {
@@ -101,12 +105,12 @@ class Translate extends Vue {
 
   @Watch('srcTxt')
   onSrcTxtChanged(val: string) {
-    this.fetchTransRes(val);
+    const from = this.langType ? 'en' : 'zh';
+    const to = this.langType ? 'zh' : 'en';
+    this.fetchTransRes(val, from, to);
   }
 
-  fetchTransRes = _.debounce((val) => {
-    const from = this.type ? 'en' : 'zh';
-    const to = this.type ? 'zh' : 'en';
+  fetchTransRes = _.debounce((val, from, to) => {
     transByBaidu(val, from, to).then((data) => {
       this.platforms.baidu.txt = _.get(data, 'trans_result[0].dst', '');
     });

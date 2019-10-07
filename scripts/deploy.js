@@ -6,10 +6,11 @@ const commands = [
   `cd ${PROJECT_PATH}`,
   'git fetch',
   'git reset --hard origin/master',
-  'rm -rf node_modules/',
+  // 'rm -rf node_modules/',
   'yarn',
+  // 'pm2 stop zldlwq-nuxt',
   'yarn build',
-  // pm2 start --name=zldlwq-nuxt yarn -- start
+  // 'pm2 start --name=zldlwq-nuxt yarn -- start'
   'pm2 restart zldlwq-nuxt'
 ];
 const shellCommand = commands.join(' && ');
