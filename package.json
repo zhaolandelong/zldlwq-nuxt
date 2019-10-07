@@ -30,6 +30,7 @@
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
     "koa": "^2.6.2",
+    "lodash": "^4.17.15",
     "nuxt-edge": "latest"
   },
   "devDependencies": {
@@ -38,6 +39,7 @@
     "@nuxtjs/eslint-config-typescript": "^0.1.3",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@types/koa": "^2.0.50",
+    "@types/lodash": "^4.14.141",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
@@ -50,6 +52,11 @@
     "lint-staged": "^8.2.1",
     "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
-    "vue-jest": "^4.0.0-0"
+    "vue-class-component": "^7.1.0",
+    "vue-jest": "^4.0.0-0",
+    "vue-property-decorator": "^8.2.2"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.1.0"
   }
 }

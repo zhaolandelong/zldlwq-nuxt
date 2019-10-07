@@ -1,8 +1,46 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <el-container class="layout-wrap">
+    <el-aside width="auto" class="layout-nav-wrap">
+      <i
+        :class="[
+          'layout-collapse-btn',
+          isCollapse ? 'el-icon-arrow-right' : 'el-icon-arrow-left'
+        ]"
+        @click="handleToggleOpen"
+      />
+      <el-menu
+        class="layout-nav"
+        :router="true"
+        :collapse-transition="false"
+        :collapse="isCollapse"
+      >
+        <el-menu-item index="/">
+          <i class="el-icon-s-home" />
+          <span slot="title">Home</span>
+        </el-menu-item>
+        <el-menu-item index="/translate">
+          <i class="el-icon-document" />
+          <span slot="title">Translate</span>
+        </el-menu-item>
+      </el-menu>
+    </el-aside>
+    <el-main class="layout-main"><nuxt /></el-main>
+  </el-container>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+@Component
+class Home extends Vue {
+  isCollapse: boolean = true;
+
+  handleToggleOpen() {
+    this.isCollapse = !this.isCollapse;
+  }
+}
+export default Home;
+</script>
 
 <style>
 html {
@@ -23,33 +61,29 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+ul {
+  list-style: none;
+  padding: 0;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.layout-wrap {
+  min-height: 100vh;
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.layout-nav-wrap {
+  display: flex;
+  flex-direction: column;
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.layout-nav {
+  flex: 1;
+}
+.layout-collapse-btn {
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  border-right: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6;
+  line-height: 48px;
+}
+.layout-main {
+  padding: 0;
 }
 </style>
