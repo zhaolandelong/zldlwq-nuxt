@@ -1,9 +1,11 @@
 language: node_js
 node_js: lts/*
 cache: yarn
-install: skip
+install:
+  - yarn
 script:
-  - yarn add -D nodemiral
+  - yarn build
+  - zip -r .nuxt.zip .nuxt
   - node scripts/deploy.js
 branches:
   only:
