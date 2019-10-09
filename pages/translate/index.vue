@@ -136,9 +136,6 @@ class Translate extends Vue {
 export default Translate;
 </script>
 <style>
-.trans-wrap {
-  padding: 16px;
-}
 .trans-wrap,
 .trans-middle > div,
 .trans-ul,

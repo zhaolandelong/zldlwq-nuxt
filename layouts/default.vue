@@ -22,6 +22,10 @@
           <i class="el-icon-document" />
           <span slot="title">Translate</span>
         </el-menu-item>
+        <el-menu-item index="/games">
+          <i class="el-icon-ship" />
+          <span slot="title">Games</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
     <el-main class="layout-main"><nuxt /></el-main>
@@ -84,6 +88,6 @@ ul {
   line-height: 48px;
 }
 .layout-main {
-  padding: 0;
+  padding: 16px;
 }
 </style>
