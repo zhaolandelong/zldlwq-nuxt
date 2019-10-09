@@ -41,7 +41,7 @@ client
       `cd ${PROJECT_PATH}`,
       'git fetch',
       'git reset --hard origin/master',
-      'rm -rf node_modules/',
+      // 'rm -rf node_modules/',
       'yarn',
       'pm2 restart zldlwq-nuxt'
     ].join(' && ');
